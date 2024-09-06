@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum - Juliana Gómez Traverso</title>
+    <title>Testimonios</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: url('img/BG.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,19 +24,46 @@
                 <li><a href="curriculum.html">Currículum</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="linea-decorativa"></div>
         </nav>
     </header>
+
     <main>
-        <section class="curriculum">
-            <h2>Currículum</h2>
-            <p>Puedes descargar mi currículum en formato PDF haciendo clic en el botón a continuación:</p>
-            <a href="#" class="download-button">Descargar CV en PDF</a>
-            <h3>Vista del Currículum en Línea</h3>
-            <p>Resumen de la experiencia, educación, y habilidades como se describe en las demás páginas.</p>
-        </section>
+        <!-- Contenedor principal -->
+        <div class="projects-container">
+            <!-- Fila para los primeros dos cuadrados -->
+            <div class="projects-row">
+                <!-- Cuadrado 1: Proyectos destacados -->
+                <div class="project-square">
+                    <h2>Proyectos destacados</h2>
+                    <h3>Página web</h3>
+                    <p>Creé una página web para un Centro de Día que necesitaba difusión para generar donaciones.</p>
+                    <p>Herramientas Utilizadas: Wix.</p>
+                    <p>Resultados: La asociación logró mejorar su difusión.</p>
+                    <a href="https://centrodediaadid.wixsite.com/website" class="download-button">Ver Proyecto</a>
+                </div>
+    
+                <!-- Cuadrado 2: Resumen -->
+                <div class="project-square">
+                    <h2>Resumen</h2>
+                    <p>Soy una profesional proactiva con experiencia en soporte técnico nivel 2 en Accenture y en reparación de hardware. He trabajado como técnica audiovisual y promotora, y he hecho voluntariado en mantenimiento de computadoras.</p>
+                    <p>Cuento con formación en IT, certificaciones en Cloud Computing y habilidades en trabajo en equipo, inglés avanzado y resolución de problemas.</p>
+                </div>
+            </div>
+    
+            <!-- Cuadrado 3: Currículum -->
+            <div class="cv-container">
+                <div class="cv-header">
+                    <h2>Currículum</h2>
+                    <a href="img/Curriculum.pdf" class="download-button" download>Descargar</a>
+                </div>
+                <iframe src="img/Curriculum.pdf" title="Currículum"></iframe>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2024 Juliana Gómez Traverso. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:contacto@julianagomezt.com">contacto@julianagomezt.com</a></p>
     </footer>
 </body>
 </html>

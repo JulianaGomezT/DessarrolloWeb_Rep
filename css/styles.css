@@ -1,73 +1,134 @@
-/* Global Styles */
+/* Estilos generales para el body */
 body {
-    font-family: Arial, sans-serif;
-    color: #000000;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
-    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    background: url('img/BG.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Estilos para el encabezado */
 header {
-    background-color: #000000;
-    padding: 20px;
+    background: transparent;
     text-align: center;
+    padding: 10px 0;
 }
 
-header nav {
-    display: inline-block;
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-header nav a {
-    color: #ffffff;
+header li {
+    margin: 0 15px;
+}
+
+header a {
+    color: white;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-size: 16px;
 }
 
-header nav a:hover {
-    color: #cccccc;
+header a:hover {
+    text-decoration: underline;
 }
 
-header hr {
-    margin-top: 10px;
-    border: 0;
-    border-top: 1px solid #ffffff;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+.linea-decorativa {
+    width: 70%;
+    margin: 10px auto;
+    border-bottom: 1px solid white;
 }
 
-section {
-    padding: 50px 10%;
-    text-align: left;
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+    box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-p {
-    color: #000000;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #000000;
+/* Estilos para el main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     text-align: center;
-    color: #ffffff;
+    flex: 1;
+}
+
+/* Estilos para el perfil */
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.texto-perfil {
+    margin-left: 20px;
+    color: white;
+    max-width: 60%;
+}
+
+.texto-perfil h1 {
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+.texto-perfil h2 {
+    font-size: 3.33vw;
+    font-weight: normal;
+}
+
+.imagen-perfil {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
+.imagen-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer p {
     margin: 5px 0;
+    font-size: 14px;
 }
 
 footer a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
 }
 
@@ -75,37 +136,368 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Specific Section Styles */
-#about {
+/* Estilos responsivos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-perfil {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .imagen-perfil {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .texto-perfil h1 {
+        font-size: 6vw;
+    }
+
+    .texto-perfil h2 {
+        font-size: 4vw;
+    }
+}
+
+/* Estilos para la experiencia */
+.experience-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     text-align: left;
 }
 
-#experience, #education, #services, #testimonials, #portfolio {
-    background-color: #f4f4f4;
+.experience-box h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.experience-box .job {
+    margin-bottom: 20px;
+}
+
+.experience-box h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.experience-box span {
+    display: block;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.experience-box p {
+    margin: 0;
+}
+
+/* Contenedor para la educación y certificaciones */
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.education-box, .certifications-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.education-box h2, .certifications-box h3 {
+    margin-top: 0;
+}
+
+.education-box .school span {
+    display: block;
+    margin-top: 15px;
+}
+
+.certifications-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications-box li {
+    margin-bottom: 15px;
+}
+
+/* Estilos responsivos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .education-box, .certifications-box {
+        width: 100%;
+    }
+
+    .education-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para los servicios */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
-#contact {
+.service-square,
+.skills-square {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 45%;
+    box-sizing: border-box;
     text-align: left;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
+.service-square h2,
+.skills-square h2 {
+    margin-top: 0;
+}
+
+.service {
     margin-bottom: 20px;
-    background-color: #e9e9e9;
-    border: 1px solid #cccccc;
-    color: #000000;
 }
 
-input[type="submit"] {
-    background-color: #333333;
+.skills-square ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.skills-square li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .service-square,
+    .skills-square {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para los testimonios */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.testimonial-square {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 35%;
+    box-sizing: border-box;
+    text-align: left;
+    height: 300px;
+    overflow: hidden;
+}
+
+.testimonial-square h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .testimonial-square {
+        max-width: 100%;
+    }
+}
+
+/* Contenedor principal para los proyectos */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Contenedor específico para Cuadrado 1 y Cuadrado 2 */
+.projects-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-square {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 48%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.cv-container {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Estilo del botón de descarga o ver proyecto */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ca75fd;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Estilo del encabezado del CV */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo del iframe del currículum */
+.cv-container iframe {
+    width: 100%;
+    height: 600px;
     border: none;
-    color: #ffffff;
-    cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #555555;
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .projects-row {
+        flex-direction: column;
+    }
+
+    .project-square,
+    .cv-container {
+        max-width: 100%;
+    }
+}
+
+/* Estilos específicos para la página de contacto */
+.contact-form {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Estilo para el título del formulario */
+.contact-form h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de las etiquetas del formulario */
+.contact-form label {
+    font-weight: bold;
+}
+
+/* Estilo de los campos de entrada y área de texto */
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo específico para el área de texto */
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Estilo del botón de enviar */
+.contact-form button {
+    background-color: #ca75fd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+/* Estilo del botón en estado hover */
+.contact-form button:hover {
+    background-color: #a363e0;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-form form {
+        gap: 10px;
+    }
+
+    .contact-form textarea {
+        height: 120px;
+    }
 }
