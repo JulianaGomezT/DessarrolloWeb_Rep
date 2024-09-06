@@ -15,7 +15,7 @@ body {
 header {
     background: transparent;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0; /* Reduce el padding para bajar la altura del header */
 }
 
 header ul {
@@ -34,7 +34,7 @@ header li {
 header a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px; /* Tamaño de fuente aumentado */
 }
 
 header a:hover {
@@ -154,11 +154,11 @@ footer a:hover {
     }
 
     .texto-perfil h1 {
-        font-size: 6vw;
+        font-size: 8vw; /* Tamaño de fuente aumentado para pantallas pequeñas */
     }
 
     .texto-perfil h2 {
-        font-size: 4vw;
+        font-size: 6vw; /* Tamaño de fuente aumentado para pantallas pequeñas */
     }
 }
 
