@@ -13,7 +13,13 @@
     </style>
 </head>
 <body>
+
     <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -27,6 +33,7 @@
             <div class="linea-decorativa"></div>
         </nav>
     </header>
+
     <main>
         <section class="experience-box">
             <h2>Experiencia Laboral</h2>
@@ -52,9 +59,17 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Juliana Gómez Traverso. Todos los derechos reservados.</p>
         <p>Contacto: <a href="mailto:juliana.gomez.traverso@gmail.com">juliana.gomez.traverso@gmail.com</a></p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
 </body>
 </html>

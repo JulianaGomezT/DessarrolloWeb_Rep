@@ -14,37 +14,50 @@
 </head>
 <body>
 
-<header>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="experiencia.html">Experiencia</a></li>
-        <li><a href="educacion.html">Educación</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="testimonios.html">Testimonios</a></li>
-        <li><a href="curriculum.html">Currículum</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    <div class="linea-decorativa"></div>
-</header>
+    <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="educacion.html">Educación</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="curriculum.html">Currículum</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="linea-decorativa"></div>
+    </header>
 
-<div class="container">
-    <main>
-        <div class="perfil">
-            <div class="texto-perfil">
-                <h1>Juliana Gómez Traverso</h1>
-                <h2>SW/App/Cloud Tech Support Associate</h2>
+    <div class="container">
+        <main>
+            <div class="perfil">
+                <div class="texto-perfil">
+                    <h1>Juliana Gómez Traverso</h1>
+                    <h2>SW/App/Cloud Tech Support Associate</h2>
+                </div>
+                <div class="imagen-perfil">
+                    <img src="img/foto.png" alt="Juliana Gómez Traverso">
+                </div>
             </div>
-            <div class="imagen-perfil">
-                <img src="img/foto.png" alt="Juliana Gómez Traverso">
-            </div>
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
 
-<footer>
-    <p>&copy; 2024 Juliana Gómez Traverso. Todos los derechos reservados.</p>
-    <p>Contacto: <a href="mailto:juliana.gomez.traverso@gmail.com">juliana.gomez.traverso@gmail.com</a></p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Juliana Gómez Traverso. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:juliana.gomez.traverso@gmail.com">juliana.gomez.traverso@gmail.com</a></p>
+    </footer>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
 </body>
 </html>
