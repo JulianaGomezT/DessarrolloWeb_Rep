@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
@@ -57,11 +57,21 @@
         <p>Contacto: <a href="mailto:juliana.gomez.traverso@gmail.com">juliana.gomez.traverso@gmail.com</a></p>
     </footer>
 
+    <!-- Modal de confirmación de envío -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p>¡Mensaje enviado con éxito!</p>
+            <button id="closeModalButton">Aceptar</button>
+        </div>
+    </div>
+
     <script>
         function toggleMenu() {
             const menu = document.querySelector('nav ul');
             menu.classList.toggle('show-menu');
         }
     </script>
+    <!-- Enlace al archivo de JavaScript para validaciones y modal -->
+    <script src="javascript/javascript.js"></script>
 </body>
 </html>
