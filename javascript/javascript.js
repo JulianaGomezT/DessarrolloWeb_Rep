@@ -94,3 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
     emailInput.addEventListener("input", validateEmail);
     messageInput.addEventListener("input", validateMessage);
 });
+
+// Mostrar el botón de "scroll to top" al desplazarse hacia abajo
+window.addEventListener("scroll", function () {
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
+    if (window.scrollY > 200) { // Mostrar cuando se ha desplazado 200px
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+});
+
+// Funcion para el botón de "scroll to top"
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Hace que el desplazamiento sea suave
+    });
+}
