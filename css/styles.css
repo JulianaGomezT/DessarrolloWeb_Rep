@@ -184,7 +184,6 @@ main {
     text-align: left;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -421,7 +420,6 @@ footer a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 35%;
-    box-sizing: border-box;
     text-align: left;
     height: 300px;
     overflow: hidden;
@@ -449,7 +447,6 @@ footer a:hover {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    box-sizing: border-box;
     text-align: left;
 }
 
