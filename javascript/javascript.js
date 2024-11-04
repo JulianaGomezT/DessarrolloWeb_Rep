@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
 
-    // Referencia a los elementos de la modal
     const successModal = document.getElementById("successModal");
     const closeModalButton = document.getElementById("closeModalButton");
 
@@ -68,13 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Muestra la modal de éxito
     function showSuccessModal() {
-        successModal.style.display = "flex"; // Muestra la modal
+        successModal.style.display = "flex"; 
     }
 
     // Cierra la modal y resetea el formulario
     closeModalButton.addEventListener("click", function () {
-        successModal.style.display = "none"; // Oculta la modal
-        form.reset(); // Limpia el formulario
+        successModal.style.display = "none"; 
     });
 
     // Validar todo el formulario al enviar
@@ -86,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const isMessageValid = validateMessage();
 
         if (isNameValid && isEmailValid && isMessageValid) {
-            showSuccessModal(); // Muestra la modal si todo es válido
+            showSuccessModal(); 
         }
     });
 
@@ -98,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Mostrar el botón de "scroll to top" al desplazarse hacia abajo
 window.addEventListener("scroll", function () {
     const scrollToTopButton = document.getElementById("scrollToTopButton");
-    if (window.scrollY > 200) { // Mostrar cuando se ha desplazado 200px
+    if (window.scrollY > 200) { 
         scrollToTopButton.style.display = "block";
     } else {
         scrollToTopButton.style.display = "none";
@@ -109,6 +107,6 @@ window.addEventListener("scroll", function () {
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: "smooth" // Hace que el desplazamiento sea suave
+        behavior: "smooth" 
     });
 }
